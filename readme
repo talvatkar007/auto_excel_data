@@ -1,0 +1,24 @@
+1. Read Excel File:
+
+    Load all sheets from the Excel file sample_datasets.xlsx using pandas.
+    Extract sheet names to determine table names.
+    Read the first row for column headers and treat the first column as primary key.
+
+2. Create Tables in PostgreSQL (Using SQLAlchemy Only):
+
+    Use SQLAlchemy ORM or Core to create the schema dynamically.
+    Check for column existence and add new columns dynamically if found.
+    No hardcoded column names or SQL strings.
+
+3. Auto Schema Evolution:
+
+    When the Excel file is updated with new columns, the script must:
+    Detect missing columns in the existing PostgreSQL table.
+    Use SQLAlchemy to add those new columns to the existing table schema.
+
+4. CRUD Operations (on one table e.g., Employees):
+
+    Create: Add a new employee.
+    Read: Fetch all employees or by ID.
+    Update: Modify an employee's department or salary.
+    Delete: Remove an employee by ID.
